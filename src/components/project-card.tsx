@@ -10,6 +10,9 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { CarouselContent, CarouselItem } from "./ui/shadcn/carousel";
+import Carousel from "./ui/carousel-custom";
+import { twMerge } from "tailwind-merge";
 
 interface Props {
   title: string;
@@ -18,7 +21,7 @@ interface Props {
   dates: string;
   tags: readonly string[];
   link?: string;
-  image?: string;
+  image?: string | readonly string[];
   video?: string;
   links?: readonly {
     icon: React.ReactNode;
@@ -60,13 +63,38 @@ export function ProjectCard({
             className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
           />
         )}
-        {image && (
+        {Array.isArray(image) && (
+          <Carousel>
+            <CarouselContent>
+              {image.map((img, idx) => (
+                <CarouselItem key={idx}>
+                  <Image
+                    src={img}
+                    alt={title}
+                    width={500}
+                    height={300}
+                    className={twMerge(
+                      "h-40 w-full overflow-hidden object-cover object-top",
+                      // "hover:scale-125"
+                    )}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+
+          </Carousel>
+        )}
+        {typeof image === "string" && image && (
           <Image
             src={image}
             alt={title}
             width={500}
             height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            className={twMerge(
+              "h-40 w-full overflow-hidden object-cover object-top -z-10",
+              // "hover:scale-[1.1] transition-all duration-300 ease-out"
+            )}
           />
         )}
       </Link>

@@ -155,6 +155,29 @@ export const DATA = {
   ],
   projects: [
     {
+      "title": "autocanadafinance.ca",
+      "href": "https://autocanadafinance.ca",
+      "dates": "Dec 2024 - Present",
+      "active": true,
+      "description":
+        "A dynamic marketing website built to enhance user engagement and streamline automotive financing services. The platform showcases a responsive design, user-friendly navigation, and features tailored to attract potential clients.",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "SCSS"
+      ],
+      "links": [
+        {
+          "type": "Website",
+          "href": "/",
+          "icon": <Icons.globe className="size-3" />
+        }
+      ],
+      "image": "/thumbnails/autocanadafinance-2025.png",
+      "video": ""
+    },  
+    {
       "title": "autoquébecfinance.ca",
       "href": "https://autoquebecfinance.ca",
       "dates": "Jun 2024 - Present",
@@ -176,7 +199,30 @@ export const DATA = {
       ],
       "image": "/thumbnails/autoquebecfinance-website.png",
       "video": ""
-    },    
+    },
+    {
+      "title": "otocan (otocanada.ca)",
+      "href": "https://otocan-website.vercel.app/",
+      "dates": "Nov 2024 - Present",
+      "active": false,
+      "description":
+        "A dynamic marketing website built to enhance user engagement and streamline automotive financing services. The platform showcases a responsive design, user-friendly navigation, and features tailored to attract potential clients.",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "SCSS"
+      ],
+      "links": [
+        {
+          "type": "Website",
+          "href": "/",
+          "icon": <Icons.globe className="size-3" />
+        }
+      ],
+      "image": "/thumbnails/otocan-website.png",
+      "video": ""
+    },     
     {
       title: "Multi-Step Form Application",
       href: "https://autocanadafinance.ca/demande-simple",
@@ -212,71 +258,75 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />
         }
       ],
-      image: "/thumbnails/autocanadafinance-simple-form.png",
+      image: [
+        "/thumbnails/autocanadafinance-simple-form.png",
+        "/thumbnails/simple-form-autoquebec.png",
+        // "/thumbnails/simple-form-otocan.png",
+      ],
       video: ""
     },    
-    {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
-      active: true,
-      description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
-    },
-    {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
-      active: true,
-      description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://automatic.chat",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
-    },
+    // {
+    //   title: "llm.report",
+    //   href: "https://llm.report",
+    //   dates: "April 2023 - September 2023",
+    //   active: true,
+    //   description:
+    //     "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+    //   technologies: [
+    //     "Next.js",
+    //     "Typescript",
+    //     "PostgreSQL",
+    //     "Prisma",
+    //     "TailwindCSS",
+    //     "Shadcn UI",
+    //     "Magic UI",
+    //     "Stripe",
+    //     "Cloudflare Workers",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://llm.report",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/dillionverma/llm.report",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "",
+    //   video: "https://cdn.llm.report/openai-demo.mp4",
+    // },
+    // {
+    //   title: "Automatic Chat",
+    //   href: "https://automatic.chat",
+    //   dates: "April 2023 - March 2024",
+    //   active: true,
+    //   description:
+    //     "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+    //   technologies: [
+    //     "Next.js",
+    //     "Typescript",
+    //     "PostgreSQL",
+    //     "Prisma",
+    //     "TailwindCSS",
+    //     "Shadcn UI",
+    //     "Magic UI",
+    //     "Stripe",
+    //     "Cloudflare Workers",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://automatic.chat",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //   ],
+    //   image: "",
+    //   video:
+    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+    // },
   ],
   volunteering: volunteering,
 } as const;
